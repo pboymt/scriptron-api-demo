@@ -1,0 +1,75 @@
+{
+    "$schema": "https://pboymt.github.io/scriptron-schema-draft-0.json",
+    "name": "api-demo",
+    "label": "API预览",
+    "description": "本项目是专门进行Scriptron Core API预览的项目",
+    "version": "0.0.0-alpha.0",
+    "compile": false,
+    "engine": 0,
+    "entries": {
+        "app": {
+            "entry": "app.js",
+            "label": "App模块",
+            "help": "App模块的API示例。",
+            "options": {
+                "use-api": {
+                    "type": "enum",
+                    "title": "使用脚本",
+                    "default": "显示版本",
+                    "enum": [
+                        "显示版本",
+                        "打开文件",
+                        "打开URL",
+                        "解析URL",
+                        "发送邮件",
+                        "转换文件路径"
+                    ]
+                },
+                "open-type": {
+                    "type": "boolean",
+                    "title": "打开文件的方式",
+                    "default": true,
+                    "switch": [
+                        "编辑",
+                        "查看"
+                    ]
+                },
+                "open-url": {
+                    "type": "string",
+                    "title": "打开链接",
+                    "default": "https://www.baidu.com"
+                },
+                "send-email": {
+                    "type": "string",
+                    "title": "邮件收件地址",
+                    "default": "no-reply@github.com"
+                },
+                "parse-uri": {
+                    "type": "string",
+                    "title": "需要解析的链接",
+                    "default": "https://www.qq.com/news?type=123"
+                },
+                "parse-path": {
+                    "type": "string",
+                    "title": "需要转换的文件路径",
+                    "default": "C:\\Scriptron\\test.txt"
+                }
+            }
+        },
+        "global": {
+            "entry": "global.js",
+            "help": "全局对象及方法示例。",
+            "label": "全局函数"
+        },
+        "mouse": {
+            "entry": "mouse.js",
+            "help": "鼠标操作示例。",
+            "label": "鼠标操作"
+        },
+        "screen": {
+            "entry": "screen.js",
+            "help": "屏幕相关操作。",
+            "label": "屏幕操作"
+        }
+    }
+}
