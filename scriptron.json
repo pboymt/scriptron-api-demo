@@ -6,6 +6,13 @@
     "version": "0.0.0-alpha.0",
     "compile": false,
     "engine": 0,
+    "assets": {
+        "templates": {
+            "start-menu": {
+                "filename": "start-menu.png"
+            }
+        }
+    },
     "entries": {
         "app": {
             "entry": "app.js",
@@ -69,7 +76,12 @@
         "screen": {
             "entry": "screen.js",
             "help": "屏幕相关操作。",
-            "label": "屏幕操作"
+            "label": "屏幕操作",
+            "use": {
+                "templates": [
+                    "start-menu"
+                ]
+            }
         }
     }
 }
